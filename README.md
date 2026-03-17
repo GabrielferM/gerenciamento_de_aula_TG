@@ -1,6 +1,5 @@
 # gerenciamento_de_aula_TG
 
----
 Grupo:
 
 Gabriel Ferreira Marra
@@ -12,6 +11,7 @@ O sistema busca centralizar informações acadêmicas, facilitando o controle do
 Tecnologia:
 
 -Front-end
+    Typescript
     React
 
 -Back-end
