@@ -9,4 +9,12 @@
  * 🟢 You can import this file directly.
  */
 export type * from './models/Usuario.js'
+export type * from './models/Turma.js'
+export type * from './models/Materia.js'
+export type * from './models/Aluno.js'
+export type * from './models/Agenda.js'
+export type * from './models/Presenca.js'
+export type * from './models/Projeto.js'
+export type * from './models/Equipe.js'
+export type * from './models/Task.js'
 export type * from './commonInputTypes.js'

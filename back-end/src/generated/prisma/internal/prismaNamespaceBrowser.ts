@@ -51,7 +51,15 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-  Usuario: 'Usuario'
+  Usuario: 'Usuario',
+  Turma: 'Turma',
+  Materia: 'Materia',
+  Aluno: 'Aluno',
+  Agenda: 'Agenda',
+  Presenca: 'Presenca',
+  Projeto: 'Projeto',
+  Equipe: 'Equipe',
+  Task: 'Task'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -69,12 +77,99 @@ export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof
 
 export const UsuarioScalarFieldEnum = {
   id: 'id',
-  email: 'email',
   nome: 'nome',
-  senha: 'senha'
+  email: 'email',
+  senha: 'senha',
+  createdAt: 'createdAt'
 } as const
 
 export type UsuarioScalarFieldEnum = (typeof UsuarioScalarFieldEnum)[keyof typeof UsuarioScalarFieldEnum]
+
+
+export const TurmaScalarFieldEnum = {
+  id: 'id',
+  descricao: 'descricao',
+  quantidade_aluno: 'quantidade_aluno',
+  periodo: 'periodo',
+  usuario_id: 'usuario_id'
+} as const
+
+export type TurmaScalarFieldEnum = (typeof TurmaScalarFieldEnum)[keyof typeof TurmaScalarFieldEnum]
+
+
+export const MateriaScalarFieldEnum = {
+  id: 'id',
+  nome: 'nome',
+  descricao: 'descricao'
+} as const
+
+export type MateriaScalarFieldEnum = (typeof MateriaScalarFieldEnum)[keyof typeof MateriaScalarFieldEnum]
+
+
+export const AlunoScalarFieldEnum = {
+  id: 'id',
+  nome: 'nome',
+  ra: 'ra',
+  turma_id: 'turma_id'
+} as const
+
+export type AlunoScalarFieldEnum = (typeof AlunoScalarFieldEnum)[keyof typeof AlunoScalarFieldEnum]
+
+
+export const AgendaScalarFieldEnum = {
+  id: 'id',
+  dia: 'dia',
+  conteudo: 'conteudo',
+  status: 'status',
+  arquivo: 'arquivo',
+  turma_id: 'turma_id',
+  materia_id: 'materia_id'
+} as const
+
+export type AgendaScalarFieldEnum = (typeof AgendaScalarFieldEnum)[keyof typeof AgendaScalarFieldEnum]
+
+
+export const PresencaScalarFieldEnum = {
+  id: 'id',
+  presente: 'presente',
+  aluno_id: 'aluno_id',
+  agenda_id: 'agenda_id'
+} as const
+
+export type PresencaScalarFieldEnum = (typeof PresencaScalarFieldEnum)[keyof typeof PresencaScalarFieldEnum]
+
+
+export const ProjetoScalarFieldEnum = {
+  id: 'id',
+  titulo: 'titulo',
+  descricao: 'descricao',
+  prazo_entrega: 'prazo_entrega',
+  turma_id: 'turma_id',
+  materia_id: 'materia_id'
+} as const
+
+export type ProjetoScalarFieldEnum = (typeof ProjetoScalarFieldEnum)[keyof typeof ProjetoScalarFieldEnum]
+
+
+export const EquipeScalarFieldEnum = {
+  id: 'id',
+  nome_grupo: 'nome_grupo',
+  projeto_id: 'projeto_id'
+} as const
+
+export type EquipeScalarFieldEnum = (typeof EquipeScalarFieldEnum)[keyof typeof EquipeScalarFieldEnum]
+
+
+export const TaskScalarFieldEnum = {
+  id: 'id',
+  titulo: 'titulo',
+  descricao: 'descricao',
+  status: 'status',
+  data_limite: 'data_limite',
+  projeto_id: 'projeto_id'
+} as const
+
+export type TaskScalarFieldEnum = (typeof TaskScalarFieldEnum)[keyof typeof TaskScalarFieldEnum]
 
 
 export const SortOrder = {
@@ -83,4 +178,12 @@ export const SortOrder = {
 } as const
 
 export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
